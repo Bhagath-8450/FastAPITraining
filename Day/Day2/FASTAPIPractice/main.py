@@ -16,3 +16,6 @@ def health():
 @app.post("/create")
 def create_something():
     return {"message":"Created"}
+@app.get("/students/{usn}")
+def get_result(usn):
+    return {"Result":"Distinction","usn":usn}
