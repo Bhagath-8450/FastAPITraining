@@ -19,3 +19,8 @@ def create_something():
 @app.get("/students/{usn}")
 def get_result(usn):
     return {"Result":"Distinction","usn":usn}
+
+#type hint
+@app.get("/candidate/{rollno}")
+def get_result(rollno:int):
+    return {"Result":"Distinction","rollno":rollno,"type":str(type(rollno))}
